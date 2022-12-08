@@ -1217,6 +1217,125 @@ import Foundation
 //
 //inArray(["live", "arp", "strong", "lol"], ["lively", "alive", "harp", "sharp", "armstrong"])
 
+//func squareDigits(_ num: Int) -> Int {
+//  return pow
+//}
+//
+//print(squareDigits(9119))
+
+//func expandedForm(_ num: Int) -> String {
+//  let num1 = round(Double(num))
+//    print(num1)
+//  return ""
+//}
+//
+//expandedForm(42)
+
+//func diamond(_ size: Int) -> String? {
+//    var counter = 1
+//    var space: String? = ""
+//    var star = "*"
+//    let nextLine = "\n"
+//    var newslace = ""
+//    print(size)
+////    if size == 1 {
+////      space = "*\n"
+////    }
+////    if size == 3 {
+////        space? = (" *\n***\n *\n")
+////    } else if size == 5 {
+////        space? = ("  *\n ***\n*****\n ***\n  *\n")
+////    } else if size % 2 == 0 || size <= 0 {
+////        space = nil
+////    } else {
+//        counter += size / 2 - 1
+//
+//        if size % 2 != 0, size >= 3  {
+//
+//            for _ in 0..<size {
+//
+//
+//                if counter > 0 {
+//                    if star.count != size {
+//                        for _ in 0..<counter {
+//                            space?.append(" ")
+//                        }
+//                        space?.append(star)
+//                        space?.append(nextLine)
+//                        star.append("**")
+//                        counter -= 1
+//                    }
+//                    if star.count == size {
+//                        space?.append(star)
+//                        space?.append(nextLine)
+//                    }
+//                } else {
+//                    if star.count >= size {
+//                        star.removeLast(2)
+//                    }
+//                    newslace.append(" ")
+//                    space?.append(newslace)
+//                    space?.append(star)
+//                    space?.append(nextLine)
+//                    if star.count > 4 {
+//                        star.removeLast(2)
+//                    }
+//                    if star.count == 3 {
+//                        newslace.append(" ")
+//                        space?.append(newslace)
+//                        space?.append(star)
+//                        space?.append(nextLine)
+//                        star.removeLast(2)
+//                    }
+//                    if star.count == 1 {
+//                        newslace.append(" ")
+//                        space?.append(newslace)
+//                        space?.append(star)
+//                        space?.append(nextLine)
+//                        break
+//                    }
+//                }
+//            }
+//        //}
+//
+//    }
+//    print(space!)
+//    return space
+//}
+//
+//diamond(7)
+
+//func comp(_ a: [Int], _ b: [Int]) -> Bool {
+//
+//    var flag = false
+//    var receivedB = b
+//    print(a)
+//
+//  if a.count < b.count {
+//
+//    flag = false
+//
+//    } else {
+//
+//        for i in a {
+//        let sum = i * i
+//        if receivedB.contains(sum) {
+//            flag = true
+//            let index = receivedB.firstIndex(of: sum)
+//            receivedB.remove(at: index ?? 0)
+//            print(receivedB)
+//        } else {
+//            flag = false
+//            break
+//        }
+//      }
+//    }
+//    print(flag)
+//    return flag
+//}
+//
+//comp([334, 710, 731, 41, 557, 395, 307], [156026, 534361, 1681, 94249, 111556, 504100, 156025, 310249])
+
 
 
 
