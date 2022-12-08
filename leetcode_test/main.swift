@@ -1337,6 +1337,37 @@ import Foundation
 //comp([334, 710, 731, 41, 557, 395, 307], [156026, 534361, 1681, 94249, 111556, 504100, 156025, 310249])
 
 
+//
+//func expandedForm(_ num: Int) -> String {
+//
+//    var n = 1
+//    var receivedNumber = num
+//    var total: [Int] = []
+//
+//
+//    for _ in 0..<String(receivedNumber).count - 1 {
+//        n = n * 10
+//    }
+//
+//    while receivedNumber > 0 {
+//        let calculated  = (receivedNumber / n) * n
+//        total.append(calculated)
+//        receivedNumber -= calculated
+//        n = 1
+//        for _ in 0..<String(receivedNumber).count - 1 {
+//            n = n * 10
+//        }
+//    }
+//
+//    let totalString = total.map({String($0)}).joined(separator: " + ")
+//
+//  return totalString
+//}
+//
+//
+//expandedForm(7304)
+
+
 
 
 
