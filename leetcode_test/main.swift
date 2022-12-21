@@ -1368,7 +1368,94 @@ import Foundation
 //expandedForm(7304)
 
 
+//func stockList(_ listOfArt: [String], _ listOfCat: [String]) -> String {
+//
+//
+//    let receivedString = listOfArt.map({$0.components(separatedBy: " ")})
+//    let list = listOfCat
+//
+//    var checker: [String:Int] = [:]
+//    var total = ""
+//    var results = ""
+//
+//
+//
+//    if receivedString.isEmpty, listOfCat.isEmpty {
+//
+//        for i in receivedString {
+//
+//            let key = i.first ?? ""
+//            let value = Int(i.last ?? "")
+//            let firstElementOfKey: String = String(key.first!)
+//
+//            if list.contains(firstElementOfKey) {
+//                if checker[firstElementOfKey] != nil {
+//                    checker[firstElementOfKey]! += value ?? 0
+//                } else {
+//                    checker[firstElementOfKey] = value
+//                }
+//            }
+//        }
+//
+//        for i in list {
+//            if checker[i] == nil {
+//                checker[i] = 0
+//            }
+//        }
+//
+//        for i in 0..<list.count {
+//            for (key, value) in checker {
+//                if list[i] == key {
+//                    total += "(\(key) : \(value)) - "
+//                    continue
+//                }
+//            }
+//        }
+//
+//    } else {
+//        total = ""
+//    }
+//
+//    if !total.isEmpty {
+//        results = String(total.dropLast(3))
+//    }
+//
+//
+//    print(total)
+//
+//    return String(results)
+//}
+//
+//stockList([], ["B", "R", "D", "X"])
 
+//class Address {
+//  var fullAddress: String
+//  var city: String
+//
+//  init(fullAddress: String, city: String) {
+//    self.fullAddress = fullAddress
+//    self.city = city
+//  }
+//}
+//
+//class Person {
+//  var name: String
+//  var address: Address
+//
+//  init(name: String, address: Address) {
+//    self.name = name
+//    self.address = address
+//  }
+//}
+//
+//var headquarters = Address(fullAddress: "123 Tutorial Street", city: "Appletown")
+//var ray = Person(name: "Ray", address: headquarters)
+//var brian = Person(name: "Brian", address: headquarters)
+//
+//brian.address.city = "Khujand"
+//
+//print(ray.address.city)
+//print(brian.address.city)
 
 
 
