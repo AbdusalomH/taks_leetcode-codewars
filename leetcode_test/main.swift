@@ -1458,10 +1458,81 @@ import Foundation
 //print(brian.address.city)
 
 
+//
+//
+//func chooseBestSum(_ t: Int, _ k: Int, _ ls: [Int]) -> Int {
+//
+//
+//    return 0
+//}
+//
+//print(chooseBestSum(331, 4, [91, 74, 73, 85, 73, 81, 87]))
 
-
-
-
+//extension Int {
+//  func isPrime() -> Bool {
+//
+//      for i in 0..<self {
+//          if i > 0 && self % i == 0 {
+//              return false
+//          }
+//      }
+//    return true
+//  }
+//}
+//
+//func getPrimes(from start: Int, to end: Int) -> [Int] {
+//
+//    var results: [Int] = []
+//    var notPrime = 0
+//
+//    var max = 0
+//    var min = 0
+//
+//    if end > start {
+//        max = end
+//        min = start
+//    } else {
+//        max = start
+//        min = end
+//    }
+//
+//    if min == 0 && max == 0 {
+//        results = []
+//    } else {
+//
+//        for i in min...max {
+//
+//            if i == 2 {
+//                results.append(i)
+//            }
+//            if i >= 2 && i % 2 != 0 {
+//                for k in 0..<i {
+//                    if k > 0 && i % k == 0 {
+//                        if results.contains(i) {
+//                            results.removeAll(where: {$0 == i})
+//                            break
+//                        } else {
+//                            results.append(i)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
+//
+//
+//
+//
+//
+//  print(results)
+//    return results as! [Int]
+//}
+//
+//getPrimes(from: 30, to: 0)
+//
+//
+//10.isPrime()
 
 
 
