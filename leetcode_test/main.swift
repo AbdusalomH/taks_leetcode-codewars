@@ -1534,9 +1534,74 @@ import Foundation
 //
 //10.isPrime()
 
+//func formatDuration(_ seconds: Int) -> String {
+//
+//
+//
+//    let (y, d, h, m, s) = (seconds / 31536000, (seconds % 31536000) / 86400, (seconds % 86400) / 3600, (seconds % 3600) / 60, seconds % 60)
+//
+//    var totalString = ""
+//
+//    if y > 1 {
+//        if d > 0 || h > 0 || m > 0 || s > 0 {
+//            totalString.append("\(y) years, ")
+//        }
+//    } else if y == 1 {
+//        if d > 0 || h > 0 || m > 0 || s > 0 {
+//            totalString.append("\(y) year, ")
+//        }
+//    }
+//
+//
+//
+//
+//
+//
+//    return ""
+//
+//}
+//
+//formatDuration(720662)
 
 
+//func smallest(_ n: Int) -> (Int, Int, Int) {
+//
+//    var small = 0
+//
+//    for i in 0..<String(n).count {
+//        for j in 0..<String(n).count {
+//
+//        }
+//    }
+//    print(small)
+//    return (0,0,0)
+//}
+//smallest(344320)
 
+//func wave(_ y: String) -> [String] {
+//
+//    var vawes = y.map({ return $0})
+//
+//    var total: [String] = []
+//
+//    for i in 0..<vawes.count {
+//
+//        if vawes[i] != " " {
+//            let upper = vawes[i].uppercased()
+//            vawes[i] = Character(upper)
+//            total.append(String(vawes))
+//            vawes = vawes.map({Character($0.lowercased())})
+//        }
+//    }
+//print(total)
+//  return total
+//}
+//
+//wave("Two words")
+
+
+//["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+//["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
 
 
 
