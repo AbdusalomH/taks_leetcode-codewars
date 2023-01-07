@@ -1604,19 +1604,99 @@ import Foundation
 //["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
 
 
+//struct Man: Hashable {
+//    let name: String
+//}
+//
+//let man = Man(name: "Abdu")
+//
+//var dictionary: [Man : Int] = [:]
+//
+//var dict = [man: 2]
+//
+//
+//extension CGSize {
+//    mutating func scale(by f: CGFloat) {
+//        width *= f
+//        height *= f
+//    }
+//}
+//
+//let s = CGSize(width: 100, height: 100)
+//s.scale(by: 2)
+//s.scale(by: 2)
 
+//let numbers: [String?] = ["1", "two", nil]
+//
+//let newNum: [Any] = numbers.compactMap({$0})
+//
+//let intArray: [Int?] = numbers.compactMap({Int($0 ?? "0")})
+//
+//print(newNum.count + intArray.count)
 
+//var dic: [Int: Int?] = [1:1, 2:2, 3: nil]
+//print(dic.count)
+//
+//let newdic = dic
+//
+//dic[2] = nil
+//dic[3] = nil
+//
+//print(dic.count)
+//print(newdic.count)
 
+//
+//var thing = "Turing"
+//var count = 0
+//
+//let closure = { [thing] in
+//    count += 1
+//    print("I love \(thing) in \(count)")
+//}
+//count = 2019
+//thing = "Swift"
+//closure()
+//
+//class A {
+//
+//    var type: String = "John"
+//
+//}
+//
+//
+//var b = A(type = ""
 
+//
+//func a() {
+//    defer{print("a")}
+//         print(1)
+//}
+//a()
 
+//let years = [15, 2, 67, 4, 5]
+//
+//let num = years.filter({ $0 < 10 }).map({ $0 * 2 }).reduce(5, +)
+//
+//print(num)
 
-
-
-
-
-
-
-
+//func findMissingLetter(_ chArr: [Character]) -> Character {
+//
+//    let alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//
+//    var missedChar: Character?
+//    for i in 0..<alphabet.count {
+//        if i != 0, i + 1 < alphabet.count {
+//            if !chArr.contains(alphabet[i]), chArr.contains(alphabet[i+1]), chArr.contains(alphabet[i-1]) {
+//                  missedChar = alphabet[i]
+//            }
+//        }
+//    }
+//
+//    return missedChar!
+//
+//}
+//
+//findMissingLetter(["O","Q","R","S"])
 
 
 
