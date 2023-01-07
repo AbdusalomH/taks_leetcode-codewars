@@ -1534,24 +1534,169 @@ import Foundation
 //
 //10.isPrime()
 
+//func formatDuration(_ seconds: Int) -> String {
+//
+//
+//
+//    let (y, d, h, m, s) = (seconds / 31536000, (seconds % 31536000) / 86400, (seconds % 86400) / 3600, (seconds % 3600) / 60, seconds % 60)
+//
+//    var totalString = ""
+//
+//    if y > 1 {
+//        if d > 0 || h > 0 || m > 0 || s > 0 {
+//            totalString.append("\(y) years, ")
+//        }
+//    } else if y == 1 {
+//        if d > 0 || h > 0 || m > 0 || s > 0 {
+//            totalString.append("\(y) year, ")
+//        }
+//    }
+//
+//
+//
+//
+//
+//
+//    return ""
+//
+//}
+//
+//formatDuration(720662)
 
 
+//func smallest(_ n: Int) -> (Int, Int, Int) {
+//
+//    var small = 0
+//
+//    for i in 0..<String(n).count {
+//        for j in 0..<String(n).count {
+//
+//        }
+//    }
+//    print(small)
+//    return (0,0,0)
+//}
+//smallest(344320)
+
+//func wave(_ y: String) -> [String] {
+//
+//    var vawes = y.map({ return $0})
+//
+//    var total: [String] = []
+//
+//    for i in 0..<vawes.count {
+//
+//        if vawes[i] != " " {
+//            let upper = vawes[i].uppercased()
+//            vawes[i] = Character(upper)
+//            total.append(String(vawes))
+//            vawes = vawes.map({Character($0.lowercased())})
+//        }
+//    }
+//print(total)
+//  return total
+//}
+//
+//wave("Two words")
 
 
+//["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+//["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
 
 
+//struct Man: Hashable {
+//    let name: String
+//}
+//
+//let man = Man(name: "Abdu")
+//
+//var dictionary: [Man : Int] = [:]
+//
+//var dict = [man: 2]
+//
+//
+//extension CGSize {
+//    mutating func scale(by f: CGFloat) {
+//        width *= f
+//        height *= f
+//    }
+//}
+//
+//let s = CGSize(width: 100, height: 100)
+//s.scale(by: 2)
+//s.scale(by: 2)
 
+//let numbers: [String?] = ["1", "two", nil]
+//
+//let newNum: [Any] = numbers.compactMap({$0})
+//
+//let intArray: [Int?] = numbers.compactMap({Int($0 ?? "0")})
+//
+//print(newNum.count + intArray.count)
 
+//var dic: [Int: Int?] = [1:1, 2:2, 3: nil]
+//print(dic.count)
+//
+//let newdic = dic
+//
+//dic[2] = nil
+//dic[3] = nil
+//
+//print(dic.count)
+//print(newdic.count)
 
+//
+//var thing = "Turing"
+//var count = 0
+//
+//let closure = { [thing] in
+//    count += 1
+//    print("I love \(thing) in \(count)")
+//}
+//count = 2019
+//thing = "Swift"
+//closure()
+//
+//class A {
+//
+//    var type: String = "John"
+//
+//}
+//
+//
+//var b = A(type = ""
 
+//
+//func a() {
+//    defer{print("a")}
+//         print(1)
+//}
+//a()
 
+//let years = [15, 2, 67, 4, 5]
+//
+//let num = years.filter({ $0 < 10 }).map({ $0 * 2 }).reduce(5, +)
+//
+//print(num)
 
-
-
-
-
-
-
+//func findMissingLetter(_ chArr: [Character]) -> Character {
+//
+//    let alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//
+//    var missedChar: Character?
+//    for i in 0..<alphabet.count {
+//        if i != 0, i + 1 < alphabet.count {
+//            if !chArr.contains(alphabet[i]), chArr.contains(alphabet[i+1]), chArr.contains(alphabet[i-1]) {
+//                  missedChar = alphabet[i]
+//            }
+//        }
+//    }
+//
+//    return missedChar!
+//
+//}
+//
+//findMissingLetter(["O","Q","R","S"])
 
 
 
