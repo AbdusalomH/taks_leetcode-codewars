@@ -2882,6 +2882,27 @@ import Foundation
 //
 //print(removeDuplicates(&nomer))
 
+//func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+//
+//    var uniqueNumber = [Int]()
+//
+//    for i in nums {
+//        if i != val {
+//            uniqueNumber.append(i)
+//        }
+//    }
+//
+//    nums = uniqueNumber
+//
+//    return nums.count
+//}
+//
+//var array = [0,1,2,2,3,0,4,2]
+//
+//removeElement(&array, 2)
+
+
+
 
 
 
