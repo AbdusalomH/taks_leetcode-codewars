@@ -1698,6 +1698,1207 @@ import Foundation
 //
 //findMissingLetter(["O","Q","R","S"])
 
+//func zeros(_ n: UInt32) -> UInt32 {
+//
+//    var results: UInt64 = 1
+//    var receivedInt: UInt64 = UInt64(n)
+//
+//    var count = 0
+//
+//    if n >= 1 {
+//        for i in 1...receivedInt {
+//            results &*= i
+//        }
+//    }
+//
+//    var checker = String(results)
+//
+//    while checker.last == "0" {
+//        count += 1
+//        checker.removeLast()
+//    }
+//
+//    print(count)
+//    print(results)
+//
+//    return UInt32(count)
+//}
+//
+//zeros(50)
+
+//
+//func find_missing(l:[Int]) -> Int {
+//
+//
+//    var sortArray = l.sorted(by: <)
+//  print(sortArray)
+//  var result = 0
+//  var dif = 0
+//
+//  for i in 0..<sortArray.count {
+//    if dif == 0, l[i+1] < l.count {
+//      dif = l[i+1] - l[i]
+//    }
+//
+//    if dif > 0 {
+//        if i+1 < l.count  {
+//            if dif != l[i+1] - l[i] {
+//                result = l[i] + dif
+//                print(l[i])
+//              }
+//          }
+//      }
+//  }
+//  print(dif)
+//  print(result)
+//  return result
+//
+//
+//}
+//
+//find_missing(l: [12, 4, -4, -12, -20, -28, -44, -52, -60])
+
+
+//struct QuestionModel {
+//    let id: Int
+//    let image: String
+//    let text: String
+//    let answers: [AnswerModel]
+//
+//}
+//
+//struct AnswerModel {
+//    let answer: String
+//    let correct: Bool
+//}
+//
+//var allQuestions = [
+//    QuestionModel(id: 1,
+//                  image: "",
+//                  text: "What is the supreme law of the land?",
+//                  answers: [
+//                    AnswerModel(answer: "The Constitution", correct: true),
+//                    AnswerModel(answer: "The Bill of Rights", correct: false),
+//                    AnswerModel(answer: "The Declaration of Independence", correct: false),
+//                    AnswerModel(answer: "The Articles of Confederation", correct: false)
+//                  ]),
+//    QuestionModel(id: 2,
+//                  image: "",
+//                  text: "What does the Constitution do?",
+//                  answers: [
+//                    AnswerModel(answer: "Establishes the framework for the federal government", correct: true),
+//                    AnswerModel(answer: "Guarantees individual liberties and restricts government power", correct: true),
+//                    AnswerModel(answer: "Outlines the relationship between the states and the federal government", correct: true),
+//                    AnswerModel(answer: "All of the above", correct: true)
+//                  ]),
+//    QuestionModel(id: 3,
+//                  image: "",
+//                  text: "What is an amendment?",
+//                  answers: [
+//                    AnswerModel(answer: "A change or addition made to the Constitution", correct: true),
+//                    AnswerModel(answer: "A formal way to modify or add to the Constitution's original text", correct: true),
+//                    AnswerModel(answer: "A way to limit the power of the President", correct: false),
+//                    AnswerModel(answer: "A legal challenge to a law", correct: false)
+//                  ]),
+//    QuestionModel(id: 4,
+//                  image: "",
+//                  text: "What do we call the first ten amendments to the Constitution??",
+//                  answers: [
+//                    AnswerModel(answer: "the Bill of Rights", correct: true),
+//                    AnswerModel(answer: "A list of laws passed by Congress", correct: false),
+//                    AnswerModel(answer: "The Emancipation Proclamation", correct: false),
+//                    AnswerModel(answer: "The Declaration of Independence", correct: false)
+//                  ]),
+//
+//    QuestionModel(id: 5,
+//                  image: "",
+//                  text: "What are the rights guaranteed by the First Amendment?",
+//                  answers: [
+//                    AnswerModel(answer: "Freedom of speech, religion, press, assembly, and petition", correct: true),
+//                    AnswerModel(answer: "Right to bear arms", correct: false),
+//                    AnswerModel(answer: "Right to a speedy trial", correct: false),
+//                    AnswerModel(answer: "Protection from unreasonable searches and seizures", correct: false)
+//                  ]),
+//
+//    QuestionModel(id: 6,
+//                  image: "",
+//                  text: "What is the economic system in the United States?",
+//                  answers: [
+//                    AnswerModel(answer: "A market-based economy", correct: true),
+//                    AnswerModel(answer: "A command economy", correct: false),
+//                    AnswerModel(answer: "A mixed economy", correct: false),
+//                    AnswerModel(answer: "A socialist economy", correct: false)
+//                  ]),
+//    QuestionModel(id: 7,
+//                  image: "",
+//                  text: "What is the rule of law?",
+//                  answers: [
+//                    AnswerModel(answer: "The principle that all individuals and institutions, including the government, are subject to and accountable to the law", correct: true),
+//                    AnswerModel(answer: "The principle that the government is above the law", correct: false),
+//                    AnswerModel(answer: "The principle that only individuals are subject to the law", correct: false),
+//                    AnswerModel(answer: "The principle that the law is subject to change based on the whims of the government", correct: false)
+//                  ]),
+//    QuestionModel(
+//                id: 8,
+//                image: "",
+//                text: "Name one branch or part of the government.",
+//                answers: [
+//                    AnswerModel(answer: "Congress", correct: true),
+//                    AnswerModel(answer: "The White House", correct: false),
+//                    AnswerModel(answer: "The Supreme Court", correct: false),
+//                    AnswerModel(answer: "The Department of Defense", correct: false)
+//                ]),
+//    QuestionModel(
+//                id: 9,
+//                image: "",
+//                text: "What are the two parts of the U.S. Congress?",
+//                answers: [
+//                    AnswerModel(answer: "The Senate and the House of Representatives", correct: true),
+//                    AnswerModel(answer: "The Executive and the Legislative Branches", correct: false),
+//                    AnswerModel(answer: "The Cabinet and the Supreme Court", correct: false),
+//                    AnswerModel(answer: "The President and the Vice President", correct: false)
+//        ]),
+//
+//        QuestionModel(
+//            id: 10,
+//            image: "",
+//            text: "How many U.S. Senators are there?",
+//            answers: [
+//                AnswerModel(answer: "100", correct: true),
+//                AnswerModel(answer: "435", correct: false),
+//                AnswerModel(answer: "50", correct: false),
+//                AnswerModel(answer: "3", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 11,
+//            image: "",
+//            text: "We elect a U.S. Senator for how many years?",
+//            answers: [
+//                AnswerModel(answer: "6", correct: true),
+//                AnswerModel(answer: "2", correct: false),
+//                AnswerModel(answer: "4", correct: false),
+//                AnswerModel(answer: "8", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 12,
+//            image: "",
+//            text: "Who is one of your state’s U.S. Senators now?",
+//            answers: [
+//                AnswerModel(answer: "Answers may vary", correct: true)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 13,
+//            image: "",
+//            text: "The House of Representatives has how many voting members?",
+//            answers: [
+//                AnswerModel(answer: "435", correct: true),
+//                AnswerModel(answer: "100", correct: false),
+//                AnswerModel(answer: "50", correct: false),
+//                AnswerModel(answer: "3", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 14,
+//            image: "",
+//            text: "We elect a U.S. Representative for how many years?",
+//            answers: [
+//                AnswerModel(answer: "2", correct: true),
+//                AnswerModel(answer: "4", correct: false),
+//                AnswerModel(answer: "6", correct: false),
+//                AnswerModel(answer: "8", correct: false)
+//            ]),
+//
+//        QuestionModel(
+//            id: 15,
+//            image: "",
+//            text: "Name your U.S. Representative.",
+//            answers: [
+//                AnswerModel(answer: "Answers may vary", correct: true)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 16,
+//            image: "",
+//            text: "Who does a U.S. Senator represent?",
+//            answers: [
+//                AnswerModel(answer: "All people of the state", correct: true),
+//                AnswerModel(answer: "All people of the country", correct: false),
+//                AnswerModel(answer: "All people of the district", correct: false),
+//                AnswerModel(answer: "All people of the city", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 17,
+//            image: "",
+//            text: "Why do some states have more Representatives than other states?",
+//            answers: [
+//                AnswerModel(answer: "Because of the state's population", correct: true),
+//                AnswerModel(answer: "Because of the state's land area", correct: false),
+//                AnswerModel(answer: "Because of the state's economy", correct: false),
+//                AnswerModel(answer: "Because of the state's location", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 18,
+//            image: "",
+//            text: "We elect a President for how many years?",
+//            answers: [
+//                AnswerModel(answer: "4", correct: true),
+//                AnswerModel(answer: "2", correct: false),
+//                AnswerModel(answer: "6", correct: false),
+//                AnswerModel(answer: "3", correct: false),
+//                ]),
+//        QuestionModel(
+//            id: 19,
+//            image: "",
+//            text: "In what month do we vote for President?",
+//            answers: [
+//                AnswerModel(answer: "November", correct: true),
+//                AnswerModel(answer: "December", correct: false),
+//                AnswerModel(answer: "October", correct: false),
+//                AnswerModel(answer: "January", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 20,
+//            image: "",
+//            text: "What is the name of the President of the United States now?",
+//            answers: [
+//                AnswerModel(answer: "Answers may vary", correct: true)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 21,
+//            image: "",
+//            text: "What is the name of the Vice President of the United States now?",
+//            answers: [
+//                AnswerModel(answer: "Answers may vary", correct: true)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 22,
+//            image: "",
+//            text: "If the President can no longer serve, who becomes President?",
+//            answers: [
+//                AnswerModel(answer: "The Vice President", correct: true),
+//                AnswerModel(answer: "The Speaker of the House", correct: false),
+//                AnswerModel(answer: "The Secretary of State", correct: false),
+//                AnswerModel(answer: "The Chief Justice", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 23,
+//            image: "",
+//            text: "If both the President and the Vice President can no longer serve, who becomes President?",
+//            answers: [
+//                AnswerModel(answer: "The Speaker of the House", correct: true),
+//                AnswerModel(answer: "The Secretary of State", correct: false),
+//                AnswerModel(answer: "The Chief Justice", correct: false),
+//                AnswerModel(answer: "The Secretary of Defense", correct: false)
+//            ]),
+//        QuestionModel(
+//            id: 24,
+//            image: "",
+//            text: "Who is the Commander in Chief of the military?",
+//            answers: [
+//                AnswerModel(answer: "The President", correct: true),
+//                AnswerModel(answer: "The Vice President", correct: false),
+//                AnswerModel(answer: "The Secretary of Defense", correct: false),
+//                AnswerModel(answer: "The Chief Justice", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 25,
+//            image: "",
+//            text: "What is the highest court in the United States?",
+//            answers: [
+//                AnswerModel(answer: "The Supreme Court", correct: true),
+//                AnswerModel(answer: "The District Court", correct: false),
+//                AnswerModel(answer: "The Circuit Court", correct: false),
+//                AnswerModel(answer: "The Court of Appeals", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 26,
+//            image: "",
+//            text: "How many justices are on the Supreme Court?",
+//            answers: [
+//                AnswerModel(answer: "Nine", correct: true),
+//                AnswerModel(answer: "Eight", correct: false),
+//                AnswerModel(answer: "Ten", correct: false),
+//                AnswerModel(answer: "Eleven", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 27,
+//            image: "",
+//            text: "Who is the Chief Justice of the United States now?",
+//            answers: [
+//                AnswerModel(answer: "John G. Roberts Jr.", correct: true),
+//                AnswerModel(answer: "Sonia Sotomayor", correct: false),
+//                AnswerModel(answer: "Elena Kagan", correct: false),
+//                AnswerModel(answer: "Neil Gorsuch", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 28,
+//            image: "",
+//            text: "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+//            answers: [
+//                AnswerModel(answer: "To print money", correct: true),
+//                AnswerModel(answer: "To issue driver's licenses", correct: false),
+//                AnswerModel(answer: "To establish schools", correct: false),
+//                AnswerModel(answer: "To conduct elections", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 29,
+//            image: "",
+//            text: "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+//            answers: [
+//                AnswerModel(answer: "To print money", correct: true),
+//                AnswerModel(answer: "To issue driver's licenses", correct: false),
+//                AnswerModel(answer: "To establish schools", correct: false),
+//                AnswerModel(answer: "To conduct elections", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 30,
+//            image: "",
+//            text: "Under our Constitution, some powers belong to the states. What is one power of the states?",
+//            answers: [
+//                AnswerModel(answer: "To provide schooling and education", correct: true),
+//                AnswerModel(answer: "To print money", correct: false),
+//                AnswerModel(answer: "To establish post offices", correct: false),
+//                AnswerModel(answer: "To declare war", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 31,
+//            image: "",
+//            text: "What is the capital of your state?",
+//            answers: [
+//                AnswerModel(answer: "<insert answer here>", correct: true),
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 32,
+//            image: "",
+//            text: "Who is the current governor of your state?",
+//            answers: [
+//                AnswerModel(answer: "<insert answer here>", correct: true),
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 33,
+//            image: "",
+//            text: "What are the two major political parties in the United States?",
+//            answers: [
+//                AnswerModel(answer: "Democratic and Republican", correct: true),
+//                AnswerModel(answer: "Libertarian and Green", correct: false),
+//                AnswerModel(answer: "Socialist and Communist", correct: false),
+//                AnswerModel(answer: "Independent and Constitution", correct: false)
+//            ]),
+//
+//        QuestionModel(id: 34, image: "", text: "What is the political party of the President now?", answers: [
+//            AnswerModel(answer: "Democratic Party", correct: true),
+//            AnswerModel(answer: "Republican Party", correct: false),
+//            AnswerModel(answer: "Green Party", correct: false),
+//            AnswerModel(answer: "Libertarian Party", correct: false)
+//        ]),
+//        QuestionModel(id: 35, image: "", text: "What is the name of the Speaker of the House of Representatives now?", answers: [
+//            AnswerModel(answer: "Nancy Pelosi", correct: true),
+//            AnswerModel(answer: "Mitch McConnell", correct: false),
+//            AnswerModel(answer: "Chuck Schumer", correct: false),
+//            AnswerModel(answer: "Kevin McCarthy", correct: false)
+//        ]),
+//        QuestionModel(id: 36, image: "", text: "There are four amendments to the Constitution about who can vote. Describe one of them.", answers: [
+//            AnswerModel(answer: "Citizens eighteen (18) and older can vote", correct: true),
+//            AnswerModel(answer: "Only citizens with a high school education can vote", correct: false),
+//            AnswerModel(answer: "Only property owners can vote", correct: false),
+//            AnswerModel(answer: "Only natural born citizens can vote", correct: false)
+//        ]),
+//        QuestionModel(id: 37, image: "", text: "What is one responsibility that is only for United States citizens?", answers: [
+//            AnswerModel(answer: "Serve on a jury", correct: true),
+//            AnswerModel(answer: "Vote in a federal election", correct: false),
+//            AnswerModel(answer: "Run for federal office", correct: false),
+//            AnswerModel(answer: "Hold a federal government job", correct: false)
+//        ]),
+//        QuestionModel(id: 38, image: "", text: "Name one right only for United States citizens.", answers: [
+//            AnswerModel(answer: "Vote in a federal election", correct: true),
+//            AnswerModel(answer: "Own property", correct: false),
+//            AnswerModel(answer: "Travel freely within the United States", correct: false),
+//            AnswerModel(answer: "Practice any religion", correct: false)
+//        ]),
+//
+//        QuestionModel(id: 39, image: "", text: "What are two rights of everyone living in the United States?", answers: [
+//            AnswerModel(answer: "Freedom of speech", correct: true),
+//            AnswerModel(answer: "Freedom of religion", correct: true),
+//            AnswerModel(answer: "Right to bear arms", correct: false),
+//            AnswerModel(answer: "Right to vote", correct: false)
+//        ]),
+//        QuestionModel(id: 40, image: "", text: "What is one thing the U.S. government does?", answers: [
+//            AnswerModel(answer: "Print money", correct: true),
+//            AnswerModel(answer: "Provide housing", correct: false),
+//            AnswerModel(answer: "Provide food", correct: false),
+//            AnswerModel(answer: "Provide clothing", correct: false)
+//        ]),
+//        QuestionModel(id: 41, image: "", text: "What is the capital of the United States?", answers: [
+//            AnswerModel(answer: "Washington, D.C.", correct: true),
+//            AnswerModel(answer: "New York City", correct: false),
+//            AnswerModel(answer: "Los Angeles", correct: false),
+//            AnswerModel(answer: "Chicago", correct: false)
+//        ]),
+//        QuestionModel(id: 42, image: "", text: "Where is the Statue of Liberty?", answers: [
+//            AnswerModel(answer: "New York Harbor", correct: true),
+//            AnswerModel(answer: "Los Angeles Harbor", correct: false),
+//            AnswerModel(answer: "San Francisco Bay", correct: false),
+//            AnswerModel(answer: "Puget Sound", correct: false)
+//        ]),
+//        QuestionModel(id: 43, image: "", text: "Why did the colonists fight the British?", answers: [
+//            AnswerModel(answer: "Because of high taxes", correct: true),
+//            AnswerModel(answer: "Because of bad weather", correct: false),
+//            AnswerModel(answer: "Because of crop failures", correct: false),
+//            AnswerModel(answer: "Because of religious differences", correct: false)
+//        ]),
+//
+//        QuestionModel(
+//            id: 44,
+//            image: "",
+//            text: "Who wrote the Declaration of Independence?",
+//            answers: [
+//                AnswerModel(answer: "Thomas Jefferson", correct: true),
+//                AnswerModel(answer: "George Washington", correct: false),
+//                AnswerModel(answer: "John Adams", correct: false),
+//                AnswerModel(answer: "James Madison", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 45,
+//            image: "",
+//            text: "When was the Declaration of Independence adopted?",
+//            answers: [
+//                AnswerModel(answer: "July 4, 1776", correct: true),
+//                AnswerModel(answer: "July 4, 1787", correct: false),
+//                AnswerModel(answer: "September 17, 1787", correct: false),
+//                AnswerModel(answer: "September 3, 1783", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 46,
+//            image: "",
+//            text: "There were 13 original states. Name three.",
+//            answers: [
+//                AnswerModel(answer: "New York", correct: true),
+//                AnswerModel(answer: "New Jersey", correct: true),
+//                AnswerModel(answer: "Georgia", correct: true),
+//                AnswerModel(answer: "Texas", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 47,
+//            image: "",
+//            text: "What happened at the Constitutional Convention?",
+//            answers: [
+//                AnswerModel(answer: "The Constitution was written", correct: true),
+//                AnswerModel(answer: "The Declaration of Independence was signed", correct: false),
+//                AnswerModel(answer: "The Bill of Rights was added to the Constitution", correct: false),
+//                AnswerModel(answer: "The Emancipation Proclamation was issued", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 48,
+//            image: "",
+//            text: "When was the Constitution written?",
+//            answers: [
+//                AnswerModel(answer: "1787", correct: true),
+//                AnswerModel(answer: "1776", correct: false),
+//                AnswerModel(answer: "1791", correct: false),
+//                AnswerModel(answer: "1803", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 49,
+//            image: "",
+//            text: "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+//            answers: [
+//                AnswerModel(answer: "Alexander Hamilton", correct: true),
+//                AnswerModel(answer: "Thomas Jefferson", correct: false),
+//                AnswerModel(answer: "George Washington", correct: false),
+//                AnswerModel(answer: "Benjamin Franklin", correct: false)
+//            ]
+//        ),
+//        QuestionModel(
+//            id: 50,
+//            image: "",
+//            text: "What is one thing Benjamin Franklin is famous for?",
+//            answers: [
+//                AnswerModel(answer: "Inventing bifocals", correct: true),
+//                AnswerModel(answer: "Writing the Declaration of Independence", correct: false),
+//                AnswerModel(answer: "Serving as the first President of the United States", correct: false),
+//                AnswerModel(answer: "Discovering electricity", correct: false)
+//            ]),
+//
+//    QuestionModel(id: 51, image: "", text: "Who is the “Father of Our Country”?", answers: [
+//        AnswerModel(answer: "George Washington", correct: true),
+//        AnswerModel(answer: "Thomas Jefferson", correct: false),
+//        AnswerModel(answer: "Abraham Lincoln", correct: false),
+//        AnswerModel(answer: "Franklin Pierce", correct: false),
+//    ]),
+//    QuestionModel(id: 52, image: "", text: "Who was the first President of the United States?", answers: [
+//        AnswerModel(answer: "Thomas Jefferson", correct: false),
+//        AnswerModel(answer: "Abraham Lincoln", correct: false),
+//        AnswerModel(answer: "Franklin Pierce", correct: false),
+//        AnswerModel(answer: "George Washington", correct: true),
+//
+//    ]),
+//    QuestionModel(id: 53, image: "", text: "What territory did the United States buy from France in 1803?", answers: [
+//        AnswerModel(answer: "Louisiana", correct: true),
+//        AnswerModel(answer: "Texas", correct: false),
+//        AnswerModel(answer: "Alaska", correct: false),
+//        AnswerModel(answer: "Hawaii", correct: false),
+//    ]),
+//
+//
+//
+//    QuestionModel(id: 54, image: "", text: "Name one war fought by the United States in the 1900s.", answers: [
+//        AnswerModel(answer: "World War I", correct: true),
+//        AnswerModel(answer: "Korean War", correct: true),
+//        AnswerModel(answer: "Civil War", correct: false),
+//        AnswerModel(answer: "French and Indian War", correct: false),
+//    ]),
+//
+//    QuestionModel(id: 55, image: "", text: "What was one important thing that Abraham Lincoln did?", answers: [
+//       AnswerModel(answer: "Freed the slaves (Emancipation Proclamation)", correct: true),
+//       AnswerModel(answer: "Won the Civil War", correct: true),
+//       AnswerModel(answer: "Invented the lightbulb", correct: false),
+//       AnswerModel(answer: "Discovered electricity", correct: false)
+//    ]),
+//
+//    QuestionModel(id: 56, image: "", text: "Name one problem that led to the Civil War.", answers: [
+//        AnswerModel(answer: "Slavery", correct: true),
+//        AnswerModel(answer: "States' rights", correct: true),
+//        AnswerModel(answer: "Taxation without representation", correct: false),
+//        AnswerModel(answer: "Lack of resources", correct: false)
+//    ]),
+//
+//    QuestionModel(id: 57, image: "", text: "What did Susan B. Anthony do?", answers: [
+//       AnswerModel(answer: "Fought for women's rights", correct: true),
+//       AnswerModel(answer: "Invented the telephone", correct: false),
+//       AnswerModel(answer: "Discovered DNA", correct: false),
+//       AnswerModel(answer: "Explored the West", correct: false)
+//   ]),
+//
+//    QuestionModel(id: 58, image: "", text: "What was one important thing that Abraham Lincoln did?", answers: [
+//           AnswerModel(answer: "Freed the slaves (Emancipation Proclamation)", correct: true),
+//           AnswerModel(answer: "Won the Civil War", correct: true),
+//           AnswerModel(answer: "Invented the lightbulb", correct: false),
+//           AnswerModel(answer: "Discovered electricity", correct: false)
+//    ]),
+//
+//    QuestionModel(id: 59, image: "", text: "Name one problem that led to the Civil War.", answers: [
+//            AnswerModel(answer: "Slavery", correct: true),
+//            AnswerModel(answer: "States' rights", correct: true),
+//            AnswerModel(answer: "Taxation without representation", correct: false),
+//            AnswerModel(answer: "Lack of resources", correct: false)
+//    ]),
+//
+//    QuestionModel(id: 60, image: "", text: "Name one war fought by the United States in the 1800s.", answers: [
+//           AnswerModel(answer: "Civil War", correct: true),
+//           AnswerModel(answer: "World War I", correct: false),
+//           AnswerModel(answer: "World War II", correct: false),
+//           AnswerModel(answer: "Korean War", correct: false)
+//       ]),
+//
+//    QuestionModel(id: 61, image: "", text: "What did Martin Luther King Jr. do?", answers: [
+//           AnswerModel(answer: "Fought for civil rights (for African Americans)", correct: true),
+//           AnswerModel(answer: "Invented the computer", correct: false),
+//           AnswerModel(answer: "Discovered gravity", correct: false),
+//           AnswerModel(answer: "Explored space", correct: false)
+//    ]),
+//
+//    QuestionModel(id: 61, image: "", text: "What major event happened on September 11, 2001, in the United States?", answers: [
+//            AnswerModel(answer: "Terrorists attacked the United States", correct: true),
+//            AnswerModel(answer: "The United States declared war on another country", correct: false),
+//            AnswerModel(answer: "The United States won the World Series", correct: false),
+//            AnswerModel(answer: "The United States hosted the Olympics", correct: false)
+//
+//    ]),
+//
+//    QuestionModel(id: 62, image: "", text: "Name one American Indian tribe in the United States.", answers: [
+//        AnswerModel(answer: "Navajo", correct: true),
+//        AnswerModel(answer: "Sioux", correct: true),
+//        AnswerModel(answer: "Cherokee", correct: true),
+//        AnswerModel(answer: "Apache", correct: true)
+//    ]),
+//    QuestionModel(id: 63, image: "", text: "Name one of the two longest rivers in the United States.", answers: [
+//        AnswerModel(answer: "Missouri", correct: true),
+//        AnswerModel(answer: "Mississippi", correct: true),
+//        AnswerModel(answer: "Colorado", correct: false),
+//        AnswerModel(answer: "Rio Grande", correct: false)
+//    ]),
+//    QuestionModel(id: 64, image: "", text: "What ocean is on the West Coast of the United States?", answers: [
+//        AnswerModel(answer: "Pacific", correct: true),
+//        AnswerModel(answer: "Atlantic", correct: false),
+//        AnswerModel(answer: "Indian", correct: false),
+//        AnswerModel(answer: "Arctic", correct: false)
+//    ]),
+//    QuestionModel(id: 65, image: "", text: "What ocean is on the East Coast of the United States?", answers: [
+//        AnswerModel(answer: "Atlantic", correct: true),
+//        AnswerModel(answer: "Pacific", correct: false),
+//        AnswerModel(answer: "Indian", correct: false),
+//        AnswerModel(answer: "Arctic", correct: false)
+//    ]),
+//    QuestionModel(id: 66, image: "", text: "Name one U.S. territory.", answers: [
+//        AnswerModel(answer: "Puerto Rico", correct: true),
+//        AnswerModel(answer: "Guam", correct: true),
+//        AnswerModel(answer: "American Samoa", correct: true),
+//        AnswerModel(answer: "Virgin Islands", correct: true)
+//    ]),
+//
+//
+//        QuestionModel(id: 67, image: "", text: "Name one state that borders Canada.", answers: [
+//            AnswerModel(answer: "Maine", correct: true),
+//            AnswerModel(answer: "New York", correct: true),
+//            AnswerModel(answer: "Washington", correct: true),
+//            AnswerModel(answer: "Michigan", correct: true)
+//        ]),
+//        QuestionModel(id: 68, image: "", text: "Name one state that borders Mexico.", answers: [
+//            AnswerModel(answer: "California", correct: true),
+//            AnswerModel(answer: "Arizona", correct: true),
+//            AnswerModel(answer: "New Mexico", correct: true),
+//            AnswerModel(answer: "Texas", correct: true)
+//        ]),
+//        QuestionModel(id: 69, image: "", text: "What is the capital of the United States?", answers: [
+//            AnswerModel(answer: "Washington, D.C.", correct: true),
+//            AnswerModel(answer: "New York", correct: false),
+//            AnswerModel(answer: "Los Angeles", correct: false),
+//            AnswerModel(answer: "Chicago", correct: false)
+//        ]),
+//        QuestionModel(id: 70, image: "", text: "Where is the Statue of Liberty?", answers: [
+//            AnswerModel(answer: "New York Harbor", correct: true),
+//            AnswerModel(answer: "Washington, D.C.", correct: false),
+//            AnswerModel(answer: "Chicago", correct: false),
+//            AnswerModel(answer: "Los Angeles", correct: false)
+//        ]),
+//        QuestionModel(id: 71, image: "", text: "Why does the flag have 13 stripes?", answers: [
+//            AnswerModel(answer: "To represent the 13 original colonies", correct: true),
+//            AnswerModel(answer: "To represent the 13 branches of government", correct: false),
+//            AnswerModel(answer: "To represent the 13 largest cities in the US", correct: false),
+//            AnswerModel(answer: "To represent the 13 founding fathers", correct: false)
+//        ]),
+//        QuestionModel(id: 72, image: "", text: "Why does the flag have 50 stars?", answers: [
+//            AnswerModel(answer: "To represent the 50 states of the US", correct: true),
+//            AnswerModel(answer: "To represent the 50 largest cities in the US", correct: false),
+//            AnswerModel(answer: "To represent the 50 branches of government", correct: false),
+//            AnswerModel(answer: "To represent the 50 founding fathers", correct: false)
+//        ]),
+//    QuestionModel(id: 73, image: "", text: "What is the name of the national anthem?", answers: [
+//           AnswerModel(answer: "The Star-Spangled Banner", correct: true),
+//           AnswerModel(answer: "God Bless America", correct: false),
+//           AnswerModel(answer: "America the Beautiful", correct: false),
+//           AnswerModel(answer: "My Country, 'Tis of Thee", correct: false)
+//       ]),
+//       QuestionModel(id: 74, image: "", text: "When do we celebrate Independence Day?", answers: [
+//           AnswerModel(answer: "July 4th", correct: true),
+//           AnswerModel(answer: "June 14th", correct: false),
+//           AnswerModel(answer: "January 1st", correct: false),
+//           AnswerModel(answer: "October 31st", correct: false)
+//       ]),
+//       QuestionModel(id: 75, image: "", text: "Name two national U.S. holidays.", answers: [
+//           AnswerModel(answer: "Thanksgiving and Christmas", correct: true),
+//           AnswerModel(answer: "Memorial Day and Labor Day", correct: true),
+//           AnswerModel(answer: "Halloween and Easter", correct: false),
+//           AnswerModel(answer: "Valentine's Day and St. Patrick's Day", correct: false)
+//       ]),
+//       QuestionModel(id: 76, image: "", text: "What is Memorial Day?", answers: [
+//           AnswerModel(answer: "A day to remember and honor those who died while serving in the military", correct: true),
+//           AnswerModel(answer: "A day to celebrate the end of World War II", correct: false),
+//           AnswerModel(answer: "A day to honor firefighters and police officers", correct: false),
+//           AnswerModel(answer: "A day to celebrate the signing of the Declaration of Independence", correct: false)
+//       ]),
+//       QuestionModel(id: 77, image: "", text: "What is Veterans Day?", answers: [
+//           AnswerModel(answer: "A day to honor all who have served in the U.S. military", correct: true),
+//           AnswerModel(answer: "A day to celebrate the end of the Civil War", correct: false),
+//           AnswerModel(answer: "A day to honor firefighters and police officers", correct: false),
+//           AnswerModel(answer: "A day to celebrate the signing of the Constitution", correct: false)
+//       ]),
+//       QuestionModel(id: 78, image: "", text: "What is Thanksgiving?", answers: [
+//           AnswerModel(answer: "A national holiday celebrated on the fourth Thursday in November, to give thanks for the year's blessings", correct: true),
+//           AnswerModel(answer: "A day to celebrate the end of the Revolutionary War", correct: false),
+//           AnswerModel(answer: "A day to honor Martin Luther King Jr.", correct: false),
+//           AnswerModel(answer: "A day to celebrate the first moon landing", correct: false)
+//       ]),
+//]
+//
+//
+//var randomQuestions = [QuestionModel]()
+//
+//for _ in 0..<10 {
+//    if let random = allQuestions.randomElement() {
+//        randomQuestions.append(QuestionModel(id: random.id , image: random.image , text: random.text , answers: random.answers ))
+//    }
+//}
+//
+//
+//let array = Array(1...100)
+//let shuffledArray = allQuestions.shuffled() // перемешиваем элементы массива
+//let chosenElements = Array(shuffledArray.prefix(10)) // выбираем первые 10 элементов
+//
+//print(chosenElements.first)
+//
+//
+//
+//class Person {
+//
+//    var department: Department?
+//
+//    init() {
+//        print("init here person's department")
+//    }
+//
+//    deinit {
+//        print("deinit here person's department")
+//    }
+//
+//
+//}
+
+//class Department {
+//
+//
+//    weak var person: Person?
+//
+//
+//    init() {
+//        print("0000")
+//    }
+//
+//
+//    deinit {
+//        print("1234")
+//    }
+//}
+//
+//var p1: Person? = Person()
+//var d1: Department? = Department()
+//
+//p1?.department = d1
+//d1?.person = p1
+//
+////d1 = nil
+//p1 = nil
+
+
+//func romanToInt(_ s: String) {
+//
+//    let numbers = ["M" : 1000, "CM" : 900, "D": 500, "C":100, "L":50, "X":10, "V":5, "IV":4, "III":3]
+//
+//    for i in s {
+//
+//    }
+//}
+//
+//romanToInt("M CM XC IV")
+//
+//
+//
+//func fromRoman(_ roman: String) -> Int {
+// var total = 0
+//
+//
+//        let allNumbers:[String:Int] = [
+//                "M":1000,
+//                "DC":600,
+//                "D":500,
+//                "CD":400,
+//                "C":100,
+//                "L":50,
+//                "XX":20,
+//                "X":10,
+//                "IX":9,
+//                "VIII":8,
+//                "VII":7,
+//                "VI":6,
+//                "V":5,
+//                "IV":4,
+//                "III":3,
+//                "II":2,
+//                "I": 1]
+//
+//        var receivedString: [String] = []
+//
+//        for i in roman {
+//            receivedString.append(String(i))
+//        }
+//
+//        if receivedString.isEmpty {
+//            total = 0
+//        }
+//
+//        if receivedString.count == 1 {
+//            total = allNumbers[roman] ?? 0
+//        }
+//
+//        if receivedString.count > 1 {
+//
+//            for n in 0...receivedString.count - 1 {
+//                if let results = allNumbers[receivedString[n]] {
+//
+//                    if n == 0 {
+//
+//                        if let next = allNumbers[receivedString[n+1]] ?? nil {
+//                            if results >= next {
+//                                total += results
+//                                continue
+//                            } else {
+//                                total -= results
+//                                continue
+//                            }
+//                        } else {
+//                            total += results
+//
+//                        }
+//                    }
+//
+//
+//                    if n > 0 && n < receivedString.count - 1 {
+//
+//                        if let nextNumber = allNumbers[receivedString[n+1]], let previosNumber = allNumbers[receivedString[n-1]] {
+//                            if results < nextNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                            if results >= nextNumber {
+//                                total += results
+//                                continue
+//                            }
+//                            if results > nextNumber, results > previosNumber {
+//                                total += results
+//                                continue
+//                            }
+//                            if results < nextNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                            if results < nextNumber, results > previosNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                        }
+//                    } else {
+//                        total += results
+//                    }
+//                }
+//            }
+//        }
+//        return total
+//return total
+//}
+//
+//fromRoman("III")
+
+//
+//
+//class Queue1 {
+//    let curentTest = DispatchQueue(label: "serialTest")
+//    let concurrent = DispatchQueue(label: "concurrent", attributes: .concurrent)
+//
+//
+//    let test = DispatchQueue(label: "234")
+//
+//
+//
+//}
+//
+//class Queue2 {
+//    private let curentTest = DispatchQueue.global()
+//    private let concurrent = DispatchQueue.main
+//
+//}
+//
+//func checkmethod() {
+//
+//    print("A")
+//
+//    DispatchQueue.main.async {
+//        print("B")
+//
+//        DispatchQueue.main.async {
+//            print("C")
+//        }
+//
+//        DispatchQueue.main.async {
+//            print("D")
+//        }
+//
+//        DispatchQueue.global().sync {
+//            print("E")
+//        }
+//
+//    }
+//
+//    print("F")
+//
+//    DispatchQueue.global(qos: .userInteractive).async {
+//        print("G")
+//    }
+//}
+//
+//checkmethod()
+//
+//RunLoop.main.run()
+//
+//func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+//
+//    let rows = matrix[0].count - 1
+//    let col = matrix.count
+//
+//    let middleIndex = (matrix.count - 1) / 2
+//
+//    for i in matrix.count {
+//
+//
+//
+//
+//    }
+//
+//
+//
+//
+//
+//
+//    return false
+//
+//    }
+//
+//
+//
+//
+//
+//print(searchMatrix([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 26))
+
+//func binarySearch(_ array: [Int], target: Int, low: Int, high: Int) -> Int? {
+//    if low > high {
+//        return nil
+//    }
+//
+//    let mid = (low + high) / 2
+//    let guess = array[mid]
+//
+//    if guess == target {
+//        return mid
+//    } else if guess > target {
+//        return binarySearch(array, target: target, low: low, high: mid - 1)
+//    } else {
+//        return binarySearch(array, target: target, low: mid + 1, high: high)
+//    }
+//}
+//
+//let numbers = [1, 2, 3, 4, 5, 6, 7, 9, 10]
+//if let index = binarySearch(numbers, target: 3, low: 0, high: numbers.count - 1) {
+//    print("Искомое значение найдено в индексе \(index)")
+//} else {
+//    print("Искомое значение не найдено")
+//}
+
+//func binarySearching(array: [Int], target: Int, firstElement: Int, lastElement: Int) -> Int? {
+//    if firstElement > lastElement {
+//        return nil
+//    }
+//
+//    let mid = (firstElement + lastElement) / 2
+//
+//    if target == array[mid] {
+//        return mid
+//    } else if target < array[mid] {
+//        return binarySearching(array: array, target: target, firstElement: firstElement, lastElement: mid - 1)
+//    } else {
+//        return binarySearching(array: array, target: target, firstElement: mid + 1, lastElement: lastElement)
+//    }
+//}
+//
+//let numbers: [Int] = [1, 2, 3, 4, 5, 6, 8, 9, 10]
+//
+//if let index = binarySearching(array: numbers, target: 7, firstElement: 0, lastElement: numbers.count - 1) {
+//    print("Искомое значение: \(numbers[index])")
+//} else {
+//    print("Искомое значение не найдено")
+//}
+
+//func searchbinary(array: [Int], target: Int) -> Int? {
+//
+//    var firstElement = 0
+//    var lastElement = array.count - 1
+//
+//    var midElement = (firstElement + lastElement) / 2
+//
+//    while firstElement <= lastElement {
+//
+//        if target == array[midElement] {
+//            print(array[midElement])
+//            return array[midElement]
+//
+//        } else if target > array[midElement] {
+//            midElement += 1
+//        } else if target < array[midElement] {
+//            midElement -= 1
+//        }
+//    }
+//    return nil
+//}
+//
+//searchbinary(array: [1,2,3,5,6,7,8,9,10, 11, 12, 15, 18], target: 3)
+
+//func binarySearch(_ array: [Int], target: Int) -> Int? {
+//    var left = 0
+//    var right = array.count - 1
+//
+//    while left <= right {
+//        let middle = (left + right) / 2
+//        let middleElement = array[middle]
+//
+//        if middleElement == target {
+//            return middle
+//        } else if middleElement < target {
+//            left = middle + 1
+//        } else {
+//            right = middle - 1
+//        }
+//    }
+//
+//    return nil
+//}
+
+//print(binarySearch([1,2,3,4,5,6,7,8,9, 10], target: 22))
+
+//func binary2(array: [Int], target: Int) -> Int? {
+//
+//    var first = 0
+//    var last = array.count - 1
+//
+//    while first <= last {
+//
+//        let middle = (first + last) / 2
+//
+//        let middleElement = array[middle]
+//        if target == middleElement {
+//            return middleElement
+//        } else if target > middleElement {
+//            first = middle + 1
+//        } else {
+//            last = middle - 1
+//        }
+//    }
+//    return nil
+//}
+
+//binary2(array: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40], target: 32)
+
+//func binary3(array: [[Int]], target: Int) -> Bool {
+//    var first = 0
+//    var last = array.count - 1
+//
+//    while first <= last {
+//        let middle = (first + last) / 2
+//        let middleElement = array[middle]
+//
+//        if middleElement.count >= 2 {
+//            let firstElement = middleElement.first!
+//            let lastElement = middleElement.last!
+//
+//            if firstElement <= target && lastElement >= target {
+//                for i in middleElement {
+//                    if i == target {
+//                        print(i)
+//                        return true
+//                    }
+//                }
+//            } else if firstElement > target {
+//                last = middle - 1
+//            } else {
+//                first = middle + 1
+//            }
+//        }
+//    }
+//
+//    return false
+//}
+//
+//binary3(array: [[1,2,3], [4,5,6], [7,8,9], [10,11,12]], target: 8)
+
+//func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+// guard !matrix.isEmpty, !matrix[0].isEmpty else {
+//    return false
+//}
+
+//let rows = matrix.count
+//let cols = matrix[0].count
+//
+//var row = 0
+//var col = cols - 1
+//
+//while row < rows && col >= 0 {
+//    let current = matrix[row][col]
+//
+//    if current == target {
+//        print(current)
+//        return true
+//    } else if current > target {
+//        col -= 1
+//    } else {
+//        row += 1
+//    }
+//}
+//
+//return false
+//}
+//
+//
+//searchMatrix([[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], 30)
+
+
+
+//func removeDuplicates(_ nums: inout [Int]) -> Int {
+//
+//    var uniqueNumbers = [Int]()
+//
+//    for num in nums {
+//        if !uniqueNumbers.contains(num) {
+//            uniqueNumbers.append(num)
+//        }
+//    }
+//    
+//    // Update the original array with the unique elements
+//    nums = uniqueNumbers
+//    
+//    return uniqueNumbers.count
+//}
+//
+//var nomer = [1,2,2,2,2,3,4,5,6]
+//
+//print(removeDuplicates(&nomer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
