@@ -2900,6 +2900,101 @@ import Foundation
 //var array = [0,1,2,2,3,0,4,2]
 //
 //removeElement(&array, 2)
+//
+//func romanToInt(_ s: String) -> Int {
+//
+//        var total = 0
+//
+//        let allNumbers:[String:Int] = [
+//                "M":1000,
+//                "DC":600,
+//                "D":500,
+//                "CD":400,
+//                "C":100,
+//                "L":50,
+//                "XX":20,
+//                "X":10,
+//                "IX":9,
+//                "VIII":8,
+//                "VII":7,
+//                "VI":6,
+//                "V":5,
+//                "IV":4,
+//                "III":3,
+//                "II":2,
+//                "I": 1]
+//
+//        var receivedString: [String] = []
+//
+//        for i in s {
+//            receivedString.append(String(i))
+//        }
+//
+//        if receivedString.isEmpty {
+//            total = 0
+//        }
+//
+//        if receivedString.count == 1 {
+//            total = allNumbers[s] ?? 0
+//        }
+//
+//        if receivedString.count > 1 {
+//
+//            for n in 0...receivedString.count - 1 {
+//                if let results = allNumbers[receivedString[n]] {
+//
+//                    if n == 0 {
+//
+//                        if let next = allNumbers[receivedString[n+1]] ?? nil {
+//                            if results >= next {
+//                                total += results
+//                                continue
+//                            } else {
+//                                total -= results
+//                                continue
+//                            }
+//                        } else {
+//                            total += results
+//
+//                        }
+//                    }
+//
+//
+//                    if n > 0 && n < receivedString.count - 1 {
+//
+//                        if let nextNumber = allNumbers[receivedString[n+1]], let previosNumber = allNumbers[receivedString[n-1]] {
+//                            if results < nextNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                            if results >= nextNumber {
+//                                total += results
+//                                continue
+//                            }
+//                            if results > nextNumber, results > previosNumber {
+//                                total += results
+//                                continue
+//                            }
+//                            if results < nextNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                            if results < nextNumber, results > previosNumber {
+//                                total -= results
+//                                continue
+//                            }
+//                        }
+//                    } else {
+//                        total += results
+//                    }
+//                }
+//            }
+//        }
+//        print(total)
+//        return total
+//}
+//
+//romanToInt("MCMXX")
 
 
 
