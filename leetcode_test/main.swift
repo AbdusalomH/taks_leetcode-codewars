@@ -2998,6 +2998,40 @@ import Foundation
 
 
 
+func lengthOfLastWord(_ s: String) -> Int {
+    
+    var count = 0
+    var receivedString = Array(s)
+    var nextword = [String]()
+    
+    
+    while receivedString.last == " " {
+        receivedString.removeLast()
+    }
+    
+    for i in 0..<receivedString.count {
+        if receivedString[i] == " " {
+            count = i
+        }
+    }
+    
+    for i in 0..<receivedString.count {
+        if i == count {
+            if receivedString[i] == " " {
+                count += 1
+                continue
+            }
+            nextword.append(String(receivedString[i]))
+            count += 1
+        }
+    }
+    return nextword.count
+}
+
+lengthOfLastWord("Hi my name is abdusalom    ")
+
+
+
 
 
 
