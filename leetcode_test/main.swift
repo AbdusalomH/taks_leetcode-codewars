@@ -2998,37 +2998,71 @@ import Foundation
 
 
 
-func lengthOfLastWord(_ s: String) -> Int {
-    
-    var count = 0
-    var receivedString = Array(s)
-    var nextword = [String]()
-    
-    
-    while receivedString.last == " " {
-        receivedString.removeLast()
-    }
-    
-    for i in 0..<receivedString.count {
-        if receivedString[i] == " " {
-            count = i
-        }
-    }
-    
-    for i in 0..<receivedString.count {
-        if i == count {
-            if receivedString[i] == " " {
-                count += 1
-                continue
-            }
-            nextword.append(String(receivedString[i]))
-            count += 1
-        }
-    }
-    return nextword.count
-}
+//func lengthOfLastWord(_ s: String) -> Int {
+//
+//    var count = 0
+//    var receivedString = Array(s)
+//    var nextword = [String]()
+//
+//
+//    while receivedString.last == " " {
+//        receivedString.removeLast()
+//    }
+//
+//    for i in 0..<receivedString.count {
+//        if receivedString[i] == " " {
+//            count = i
+//        }
+//    }
+//
+//    for i in 0..<receivedString.count {
+//        if i == count {
+//            if receivedString[i] == " " {
+//                count += 1
+//                continue
+//            }
+//            nextword.append(String(receivedString[i]))
+//            count += 1
+//        }
+//    }
+//    return nextword.count
+//}
+//
+//lengthOfLastWord("Hi my name is abdusalom    ")
 
-lengthOfLastWord("Hi my name is abdusalom    ")
+//func lengthOfLastWord(_ s: String) -> Int {
+//
+//
+//    let new = s.split(separator: " ").last!.count
+//
+//    print(new)
+//
+//    return s.split(separator: " ").last!.count
+//
+//}
+//
+//lengthOfLastWord("My name is Abdusalom")
+
+
+//func longestCommonPrefix(_ strs: [String]) -> String {
+//
+//
+//    var receivedStriing = strs.first ?? ""
+//
+//    for word in strs {
+//        while !word.starts(with: receivedStriing) {
+//            receivedStriing.removeLast()
+//        }
+//
+//    }
+//    return receivedStriing
+//}
+//
+//
+//longestCommonPrefix(["abdusalom", "abdi", "abda",])
+
+
+
 
 
 
