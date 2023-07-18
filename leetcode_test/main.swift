@@ -3028,7 +3028,9 @@ func lengthOfLastWord(_ s: String) -> Int {
     return nextword.count
 }
 
-lengthOfLastWord("Hi my name is abdusalom    ")
+//lengthOfLastWord("Hi my name is abdusalom    ")
+
+
 
 
 
