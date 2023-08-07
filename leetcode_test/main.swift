@@ -3044,29 +3044,40 @@ import Foundation
 //lengthOfLastWord("My name is Abdusalom")
 
 
-func longestCommonPrefix(_ strs: [String]) -> String {
+//func longestCommonPrefix(_ strs: [String]) -> String {
+//
+//
+//    var receivedStriing = strs.first ?? ""
+//
+//    for word in strs {
+//        while !word.starts(with: receivedStriing) {
+//            receivedStriing.removeLast()
+//        }
+//
+//    }
+//    return receivedStriing
+//}
+//
+//
+//longestCommonPrefix(["abdu", "abdi", "abda",])
+//
 
 
-    var receivedStriing = strs.first ?? ""
+func searchInsert(_ nums: [Int], _ target: Int) -> Int {
 
-    for word in strs {
-        while !word.starts(with: receivedStriing) {
-            receivedStriing.removeLast()
+    var returnMe = 0
+    
+    for i in 0..<nums.count{
+        if target == nums[i] {
+            returnMe = i
+        } else if target > nums[i] {
+            returnMe = i + 1
         }
-
     }
-    return receivedStriing
+    return returnMe
 }
 
-
-longestCommonPrefix(["abdusalom", "abdi", "abda",])
-
-
-
-
-
-
-
+print(searchInsert([1,3,5,6], 7))
 
 
 
