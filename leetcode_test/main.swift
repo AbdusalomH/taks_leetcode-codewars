@@ -3061,22 +3061,7 @@ import Foundation
 //
 //longestCommonPrefix(["abdusalom", "abdi", "abda",])
 
-//
-//var greating = { (name: String) in
-//    print("hello \(name)")
-//}
-//
-//greating("Andrey")
-//
-//func grabLunch(message: String, search: (String)->()) {
-//
-//    print("hello \(message)")
-//  //
-//}
-//
-//grabLunch(message: "Kolya") { name in
-//    print("Today will be the best day ever")
-//}
+
 
 //func ff(completion: () -> ()) {
 //
@@ -3105,25 +3090,6 @@ func mySqrt(_ x: Int) -> Int {
 }
 
 print(mySqrt(8))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
