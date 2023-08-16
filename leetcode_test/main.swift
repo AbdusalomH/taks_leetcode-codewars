@@ -3043,23 +3043,83 @@ import Foundation
 //
 //lengthOfLastWord("My name is Abdusalom")
 
+//
+//func longestCommonPrefix(_ strs: [String]) -> String {
+//
+//
+//    var receivedStriing = strs.first ?? ""
+//
+//    for word in strs {
+//        while !word.starts(with: receivedStriing) {
+//            receivedStriing.removeLast()
+//        }
+//
+//    }
+//    return receivedStriing
+//}
+//
+//
+//longestCommonPrefix(["abdusalom", "abdi", "abda",])
 
-func longestCommonPrefix(_ strs: [String]) -> String {
+//
+//var greating = { (name: String) in
+//    print("hello \(name)")
+//}
+//
+//greating("Andrey")
+//
+//func grabLunch(message: String, search: (String)->()) {
+//
+//    print("hello \(message)")
+//  //
+//}
+//
+//grabLunch(message: "Kolya") { name in
+//    print("Today will be the best day ever")
+//}
+
+//func ff(completion: () -> ()) {
+//
+//}
+//
+//ff {
+//    print("ok")
+//}
 
 
-    var receivedStriing = strs.first ?? ""
+//func strStr(_ haystack: String, _ needle: String) -> Int {
+//
+//    var receivedNeedle = needle
+//
+//    for i in haystack {
+//
+////        while i.starts(receivedNeedle) {
+////            receivedNeedle.removedlast
+////        }
+//
+//    }
+//}
 
-    for word in strs {
-        while !word.starts(with: receivedStriing) {
-            receivedStriing.removeLast()
-        }
-
-    }
-    return receivedStriing
+func mySqrt(_ x: Int) -> Int {
+    return Int(sqrt(Double(x)).rounded(.down))
 }
 
+print(mySqrt(8))
 
-longestCommonPrefix(["abdusalom", "abdi", "abda",])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
