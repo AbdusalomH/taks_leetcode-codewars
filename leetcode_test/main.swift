@@ -3043,7 +3043,7 @@ import Foundation
 //
 //lengthOfLastWord("My name is Abdusalom")
 
-
+//
 //func longestCommonPrefix(_ strs: [String]) -> String {
 //
 //
@@ -3059,25 +3059,40 @@ import Foundation
 //}
 //
 //
-//longestCommonPrefix(["abdu", "abdi", "abda",])
+//longestCommonPrefix(["abdusalom", "abdi", "abda",])
+
+
+
+//func ff(completion: () -> ()) {
 //
+//}
+//
+//ff {
+//    print("ok")
+//}
 
 
-func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+//func strStr(_ haystack: String, _ needle: String) -> Int {
+//
+//    var receivedNeedle = needle
+//
+//    for i in haystack {
+//
+////        while i.starts(receivedNeedle) {
+////            receivedNeedle.removedlast
+////        }
+//
+//    }
+//}
 
-    var returnMe = 0
-    
-    for i in 0..<nums.count{
-        if target == nums[i] {
-            returnMe = i
-        } else if target > nums[i] {
-            returnMe = i + 1
-        }
-    }
-    return returnMe
+func mySqrt(_ x: Int) -> Int {
+    return Int(sqrt(Double(x)).rounded(.down))
 }
 
-print(searchInsert([1,3,5,6], 7))
+print(mySqrt(8))
+
+
+
 
 
 
