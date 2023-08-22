@@ -3085,11 +3085,70 @@ import Foundation
 //    }
 //}
 
-func mySqrt(_ x: Int) -> Int {
-    return Int(sqrt(Double(x)).rounded(.down))
-}
+//func mySqrt(_ x: Int) -> Int {
+//    return Int(sqrt(Double(x)).rounded(.down))
+//}
+//
+//print(mySqrt(8))
 
-print(mySqrt(8))
+
+//
+//    func strStr(_ haystack: String, _ needle: String) -> Int {
+//
+//        var results = 0
+//
+//        var receivedhaystack = Array(haystack)
+//        var receivedNeedle = Array(needle)
+//
+//        for i in 0..<receivedNeedle.count {
+//
+//            if receivedNeedle[i] == receivedhaystack[i] {
+//                results = i
+//                continue
+//            } else {
+//                results = -1
+//                break
+//            }
+//        }
+//        print(results)
+//        return results
+//    }
+//
+//strStr("hello", "ll")
+
+//func intToRoman(_ num: Int) -> String {
+//
+//    let allRomans:[String] = ["M","CM","DC","D","CD","C","XC","L","XL","XX","X","IX","VIII","VII","VI","V","IV","III","II","I"]
+//    let allNumbers: [Int] = [1000,900,600,500,400,100,90,50,40,20,10,9,8,7,6,5,4,3,2,1]
+//
+//    var totalString = ""
+//
+//    var receivedNumber = num
+//
+//    while receivedNumber > 0 {
+//
+//        for i in 0..<allRomans.count {
+//
+//            let results = receivedNumber - allNumbers[i]
+//
+//            if results >= 0 {
+//                receivedNumber = results
+//                totalString.append(allRomans[i])
+//            break
+//            }
+//        }
+//    }
+//    return totalString
+//}
+//
+//intToRoman(2002)
+
+
+    
+
+
+
+
 
 
 
